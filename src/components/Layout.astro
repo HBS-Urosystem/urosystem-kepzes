@@ -10,7 +10,7 @@ const props = Astro.props
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 		<link rel="icon" type="image/x-icon" href="/favicon.ico" />
 		<title>UroSystem – {props.title}</title>
-    <meta name="description" content="New customer onboarding form" />
+    <meta name="description" content={props.desctiption} />
     <style is:global>
       @import "/src/assets/global.css";
     </style>
@@ -41,6 +41,7 @@ const props = Astro.props
         <aside class="text-center mx-auto pb-16 max-w-md">
         <h1 class="mt-10 mb-5 text-5xl font-bold">UroSystem Zrt.</h1>
         <h2 class="mt-10 mb-5 text-3xl">{props.title}</h2>
+          <slot name="description"/>
           <slot name="header"/>
         </aside>
         <article class="max-w-4xl mx-auto py-8">
