@@ -102,7 +102,7 @@
     <!--<h3 class="text-center">Please set up your Profile before placing your first order.</h3>-->
     <fieldset class="flex justify-center gap-8 my-4">
       <!--<a href="/profile?email={visitor.email}" tabindex="0" class="btn btn-primary flex-none">Profile</a>-->
-      <a href="/order?email={visitor.email}" tabindex="0" class="btn btn-primary flex-none">Képzési anyagok megtekintése</a>
+      <a href="/letoltes?email={visitor.email}" tabindex="0" class="btn btn-primary flex-none">Képzési anyagok megtekintése</a>
     </fieldset>
     <fieldset>
       <label for="logout">vagy<br></label>
