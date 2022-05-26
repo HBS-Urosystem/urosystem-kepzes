@@ -1,0 +1,16 @@
+---
+// Component Imports
+import Layout from '../components/Layout.astro';
+import Identity from '../components/Identity.svelte';
+
+// Full Astro Component Syntax:
+// https://docs.astro.build/core-concepts/astro-components/
+
+let mainImgUrl = '/assets/+.svg';
+
+//const netlifyIdentity = require('netlify-identity-widget');
+
+---
+<Layout title="IC képzés 2022">
+  <Identity slot="header" client:only="svelte" bind={true}}/>
+</Layout>
