@@ -10,20 +10,11 @@ const user = url.searchParams.get('email');
 
     <div class="card w-auto shadow-xl image--full mx-4 bg-base-100">
       <main class="card-body gap-8" name="B2B Order Form" method="POST" action="/thankyou">
-        <fieldset class="flex flex-wrap gap-8">
-          <label for="company" class="flex-1 min-w-fit">Customer name<br>
-            <input id="company" name="company" type="text" required placeholder="* required" class="input input-bordered input-md flex-1 min-w-fit w-full">
-          </label>
-          <label for="email" class="flex-1 min-w-fit">Contact's Email<br>
-            <input id="email" name="email" type="email" required placeholder="* required" class="input input-bordered input-md flex-1 min-w-fit w-full" value={user}>
-          </label>
-        </fieldset>
-
-        <fieldset class="flex gap-8">
-          <label for="consent"><input id="consent" name="consent" type="checkbox" required class="checkbox checkbox-xs" /> I accept the 
-          <a href="https://www.urosystem.com/en/privacy-policy" rel="external" target="_blank">Privacy Policy</a></label>
-          <button type="submit" tabindex="0" class="btn btn-primary flex-none ml-auto">Send</button>
-        </fieldset>
+        <ul class="menu bg-base-100 w-56">
+          <li><a>File 1</a></li>
+          <li><a>File 2</a></li>
+          <li><a>File 3</a></li>
+        </ul>
       </main>
     </div>
     <aside class="flex justify-center my-10">

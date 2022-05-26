@@ -8,9 +8,9 @@
   onMount(() => {
     //if (bind) {
       netlifyIdentity.init({
+        locale: 'hu' // defaults to 'en'
         //showHeaders: false, /// TODO
-        /*container: '#netlify-modal', // defaults to document.body
-        locale: 'en' // defaults to 'en'*/
+        /*container: '#netlify-modal', // defaults to document.body*/
       })
     //}
     // Open the modal
