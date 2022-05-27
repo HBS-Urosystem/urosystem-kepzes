@@ -78,18 +78,18 @@
   //$: console.log('consent', consent)
 </script>
 
-{#if !!bind}
+<!--{#if !!bind}-->
 {#if !visitor}
 <div class="card mx-auto w-fit shadow-xl image-full">
   <div class="card-body">
-    <fieldset class="flex gap-8 my-4">
-      <legend>Kérjük, rgisztráljon vagy jelentkezzen be!</legend>
-      <button disabled={!consent} on:click={signup} tabindex="0" class="btn btn-primary flex-none">Regisztráció</button>
-      <button on:click={login} tabindex="0" class="btn btn-primary flex-none">Bejelentkezés</button>
+    <fieldset class="flex flex-wrap gap-8 my-4">
+      <legend>Kérjük, regisztráljon vagy jelentkezzen be!</legend>
+      <button disabled={!consent} on:click={signup} tabindex="0" class="btn btn-primary mx-auto">Regisztráció</button>
+      <button on:click={login} tabindex="0" class="btn btn-primary mx-auto">Bejelentkezés</button>
     </fieldset>
     <fieldset>
       <input id="consent" bind:checked={consent} name="consent" type="checkbox" required class="checkbox checkbox-xs" />
-      <label for="consent">Elfogadom a </label><a href="https://www.urosystem.com/hu/privacy-policy" rel="external" target="_blank">Adatvédelmi nyilatkozatot</a>
+      <label for="consent">Elfogadom az </label><a href="https://www.urosystem.com/hu/privacy-policy" rel="external" target="_blank">Adatvédelmi nyilatkozatot</a>
     </fieldset>
   </div>
 </div>
@@ -111,7 +111,7 @@
   </div>
 </div>
 {/if}
-{/if}
+<!--{/if}-->
 <!--
 <h3>User: {user?.email}</h3>
 <h3>Visitor: {visitor?.email}</h3>
