@@ -78,9 +78,9 @@
   //$: console.log('consent', consent)
 </script>
 
-<!--{#if !!bind}-->
+{#if !!bind}
 {#if !visitor}
-<div class="card mx-auto w-fit shadow-xl image-full">
+<div class="card mx-auto w-fit shadow-xl image-full py-8">
   <div class="card-body">
     <fieldset class="flex flex-wrap gap-8 my-4">
       <legend>Kérjük, regisztráljon vagy jelentkezzen be!</legend>
@@ -111,12 +111,15 @@
   </div>
 </div>
 {/if}
-<!--{/if}-->
+{/if}
 <!--
 <h3>User: {user?.email}</h3>
 <h3>Visitor: {visitor?.email}</h3>
 -->
 <style>
+  .card {
+    z-index: 9999;
+  }
   /*:global(div.header) {
     display: none;
   }*/
