@@ -80,9 +80,9 @@
 
 {#if !!bind}
 {#if !visitor}
-<div class="card mx-auto w-fit shadow-xl image-full py-8">
+<div class="card mx-auto w-fit shadow-xl image-full mb-8">
   <div class="card-body">
-    <fieldset class="flex flex-wrap gap-8 my-4">
+    <fieldset class="flex flex-wrap gap-8">
       <legend>Kérjük, regisztráljon vagy jelentkezzen be!</legend>
       <button disabled={!consent} on:click={signup} tabindex="0" class="btn btn-primary mx-auto">Regisztráció</button>
       <button on:click={login} tabindex="0" class="btn btn-primary mx-auto">Bejelentkezés</button>

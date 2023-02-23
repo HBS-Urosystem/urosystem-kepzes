@@ -11,11 +11,14 @@ let mainImgUrl = '/assets/+.svg';
 //const netlifyIdentity = require('netlify-identity-widget');
 
 ---
-<Layout title="IC képzés 2022" desctiption="A 2022. május 27-én megrendezett, Az interstitialis cystitis/hólyagfájdalom szindróma (IC/BPS) aktuális kérdései című, SE-TK/2022.I./00328 számú OFTEX tanfolyam anyagai.">
-  <p slot="description">
-    Az alábbi linken regisztráció után elérheti a 2022. május 27-én megrendezett,
-    <i>Az interstitialis cystitis/hólyagfájdalom szindróma (IC/BPS) aktuális kérdései</i> 
-    című, SE-TK/2022.I./00328 számú OFTEX tanfolyam anyagait.
+<Layout title="IC képzés" desctiption="Az interstitialis cystitis/hólyagfájdalom szindróma (IC/BPS) aktuális kérdései című, SE-TK/2022.I./00328 számú OFTEX tanfolyam anyagai, ">
+  <p slot="description" class="text-xl">
+    Regisztráció után elérheti eddigi képzéseink anyagait:
   </p>
+  <ul slot="header" class="prose mx-auto list-disc">
+    <li>A 2022. május 27-én megrendezett, Az interstitialis cystitis/hólyagfájdalom szindróma (IC/BPS) aktuális kérdései című, SE-TK/2022.I./00328 számú OFTEX tanfolyam anyagait.</li>
+    <li>A 2022. szeptember 29-én megrendezett diagnosztikára vonatkozó online továbbképzés anyagait.</li>
+    <li>A 2023. február 9-én megrendezett terápiás lehetőségekre vonatkozó online továbbképzés anyagait.</li>
+  </ul>
   <Identity slot="header" client:only="svelte" bind={true}}/>
 </Layout>
