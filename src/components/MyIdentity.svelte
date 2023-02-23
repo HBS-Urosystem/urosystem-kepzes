@@ -79,34 +79,34 @@
 </script>
 
 {#if !!bind}
-{#if !visitor}
-<div class="card mx-auto w-fit shadow-xl image-full mb-8">
-  <div class="card-body">
-    <fieldset class="flex flex-wrap gap-8">
-      <legend>Kérjük, regisztráljon vagy jelentkezzen be!</legend>
-      <button disabled={!consent} on:click={signup} tabindex="0" class="btn btn-primary mx-auto">Regisztráció</button>
-      <button on:click={login} tabindex="0" class="btn btn-primary mx-auto">Bejelentkezés</button>
-    </fieldset>
-    <fieldset>
-      <input id="consent" bind:checked={consent} name="consent" type="checkbox" required class="checkbox checkbox-xs" />
-      <label for="consent">Elfogadom az </label><a href="https://www.urosystem.com/hu/privacy-policy" rel="external" target="_blank">Adatvédelmi nyilatkozatot</a>
-    </fieldset>
-  </div>
-</div>
-{/if}
+  {#if !visitor}
+    <div class="card mx-auto w-fit shadow-xl image-full mb-8">
+      <div class="card-body">
+        <fieldset class="flex flex-wrap gap-8">
+          <legend>Kérjük, regisztráljon vagy jelentkezzen be!</legend>
+          <button disabled={!consent} on:click={signup} tabindex="0" class="btn btn-primary mx-auto">Regisztráció</button>
+          <button on:click={login} tabindex="0" class="btn btn-primary mx-auto">Bejelentkezés</button>
+        </fieldset>
+        <fieldset class="text-center mt-2">
+          <input id="consent" bind:checked={consent} name="consent" type="checkbox" required class="checkbox checkbox-xs" />
+          <label for="consent">Elfogadom az </label><a href="https://www.urosystem.com/hu/privacy-policy" rel="external" target="_blank">Adatvédelmi nyilatkozatot</a>
+        </fieldset>
+      </div>
+    </div>
+  {/if}
 
-{#if visitor}
-<div class="card mx-auto w-fit shadow-xl image-full">
-  <div class="card-body">
-    <p class="text-center">Bejelentkezve: {visitor?.email}</p>
-    <fieldset class="flex justify-center gap-8 my-4">
-      <a href="/letoltes?email={visitor.email}" tabindex="0" class="btn btn-primary flex-none">Képzési anyagok megtekintése</a>
-    </fieldset>
-    <fieldset>
-      <label for="logout">vagy<br></label>
-      <button id="logout" on:click={logout} tabindex="0" class="btn btn-ghost flex-none">Kijelentkezés</button>
-    </fieldset>
-  </div>
-</div>
-{/if}
+  {#if visitor}
+    <div class="card mx-auto w-fit shadow-xl image-full mb-8">
+      <div class="card-body">
+        <p class="text-center">Bejelentkezve: {visitor?.email}</p>
+        <fieldset class="flex justify-center gap-8">
+          <a href="/letoltes?email={visitor.email}" tabindex="0" class="btn btn-primary flex-none">Képzési anyagok megtekintése</a>
+        </fieldset>
+        <fieldset class="flex flex-col w-fit text-center mx-auto">
+          <label for="logout">vagy</label>
+          <button id="logout" on:click={logout} tabindex="0" class="btn btn-ghost mt-2">Kijelentkezés</button>
+        </fieldset>
+      </div>
+    </div>
+  {/if}
 {/if}
