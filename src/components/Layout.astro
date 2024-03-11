@@ -58,8 +58,9 @@ const props = Astro.props
 
 <style>
   .hero {
-    background-size: 568px;
+    background-size: 21rem;
     background-position: top;
+    min-height: calc(100vh - 4rem);
   }
   /*@media (orientation: landscape) {
     header {
@@ -69,10 +70,10 @@ const props = Astro.props
   .hero-overlay {
     backdrop-filter: blur(2px);
   }
-  main {
+  /*main {
     @apply container mx-auto;
     max-width: 1280px;
-  }
+  }*/
   article {
     @apply prose md:prose-lg lg:prose-xl prose-a:underline prose-a:decoration-dotted;
   }
